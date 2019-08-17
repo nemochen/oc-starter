@@ -13,7 +13,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="6Mr-Cy-amk">
             <objects>
-                <viewController id="riC-xp-AnV" customClass="SignInViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SignInViewController" storyboardIdentifier="SignInViewController" id="riC-xp-AnV" customClass="SignInViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OcF-5e-ivR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-qz-Cj7">
+                                <rect key="frame" x="188" y="180" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="onCloseBtnClick:" destination="riC-xp-AnV" eventType="touchUpInside" id="33Q-Xd-cVl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="E7h-zg-UG5"/>
@@ -32,15 +40,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAJ-dG-1xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1005.7971014492755" y="-1437.7232142857142"/>
+            <point key="canvasLocation" x="1006" y="-1333"/>
         </scene>
         <!--Main-->
         <scene sceneID="5dp-iE-D1q">
             <objects>
-                <navigationController navigationBarHidden="YES" id="8zn-3j-TPi" sceneMemberID="viewController">
+                <navigationController id="8zn-3j-TPi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Main" image="first" id="u0w-HY-P32"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SRG-jg-TrR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -49,7 +57,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rts-LK-PL5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="-639"/>
+            <point key="canvasLocation" x="1006" y="-566"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="cq6-Tn-UrJ">
@@ -66,6 +74,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okk-BZ-8o2">
+                                <rect key="frame" x="167" y="234" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Detail"/>
+                                <connections>
+                                    <action selector="onShowDetailBtnClick:" destination="xpd-1Q-kXB" eventType="touchUpInside" id="hgk-Ii-kwu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFW-kd-H4R">
+                                <rect key="frame" x="186" y="322" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SignIn"/>
+                                <connections>
+                                    <action selector="onSignInBtnClick:" destination="xpd-1Q-kXB" eventType="touchUpInside" id="oXa-Bb-CdK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0mG-MX-ltE"/>
@@ -74,15 +98,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hek-ST-qXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1867" y="-640"/>
+            <point key="canvasLocation" x="1867" y="-567"/>
         </scene>
         <!--Home-->
         <scene sceneID="mhd-52-Sty">
             <objects>
-                <navigationController navigationBarHidden="YES" id="SNc-cY-5Oc" sceneMemberID="viewController">
+                <navigationController id="SNc-cY-5Oc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="second" id="Nxg-4f-6mK"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="olr-hG-VDp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -92,6 +116,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efY-Dh-JFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1006" y="324"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="zDj-xb-zOh">
+            <objects>
+                <viewController restorationIdentifier="DetailViewController" storyboardIdentifier="DetailViewController" id="cgk-vP-8vg" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oKX-ki-JmQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DetailViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0R1-f9-Pux">
+                                <rect key="frame" x="129" y="432" width="157" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tvi-Dk-3TK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1p-29-Jij" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="1094.8660714285713"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="nJG-m5-7bd">

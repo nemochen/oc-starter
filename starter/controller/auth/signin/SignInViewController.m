@@ -19,6 +19,10 @@
     // Do any additional setup after loading the view.
 }
 
+- (IBAction)onCloseBtnClick:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 

@@ -36,10 +36,24 @@
 
 #define GET_BUTTON(_frame_, _fontSize_, _boldFont_, _textColor_) [BiViewUtil getButton:_frame_ fontSize:_fontSize_ boldFont:_boldFont_ textColor:_textColor_]
 
+// controller
+#define STORYBOARD_CONTROLLER(_controllerId) [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:_controllerId]
+
 // 类型判断
 #define VALID_STRING(_str) ([_str isKindOfClass:[NSString class]]?_str:@" ")
 #define VALID_ARRAY(_arr) ([_arr isKindOfClass:[NSArray class]]?_arr:[NSArray array])
 #define VALID_DIC(_dic) ([_dic isKindOfClass:[NSDictionary class]]?_dic:[NSDictionary dictionary])
 #define VALID_NUMBER(_num) ([_num isKindOfClass:[NSNumber class]]?_num:[NSNumber numberWithInt:0])
+
+// 网络层
+// http请求 正式 前缀
+#define BASE_URL_PRODUCT @""
+// http请求 开发 前缀
+#define BASE_URL_DEV @""
+
+// websocket 正式 url
+#define URL_WEBSOCKET_PRODUCT @""
+// websocket 开发 url
+#define URL_WEBSOCKET_DEV @""
 
 #endif /* PrefixHeader_pch */
